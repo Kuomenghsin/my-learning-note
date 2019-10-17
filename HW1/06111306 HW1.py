@@ -3,9 +3,9 @@ arr = [9,11,8,6,5,12,3,1]
 
 
 def quick_sort(list):
-    small = []
-    big = []
-    point = []
+    less = []
+    more = []
+    middle = []
 
     if len(list) <= 1:
         return list
@@ -14,16 +14,16 @@ def quick_sort(list):
         key = list[0] #第一個數為選取的任意值
         for i in list:
             if i < key: #比任意值小的數
-                small.append(i)
+                less.append(i)
             elif i > key: #比任意值大的數
-                big.append(i)    
+                more.append(i)    
             else:
-                point.append(i)
+                middle.append(i)
                 
                 
-    small = quick_sort(small)   
-    big  = quick_sort(big)
-    return small + point  + big
+    less = quick_sort(less)   
+    more  = quick_sort(more)
+    return less + middle  + more
 
     
 quick_sort(arr)
