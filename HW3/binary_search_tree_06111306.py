@@ -25,7 +25,7 @@ class Solution(object):
             return N_node
             
         #加入數值小於root的情況
-        if root.val > val && root != None && root.val != val:
+        if root.val > val and root != None and root.val != val:
             # 左邊沒有子數，直接加入
             if root.left == None:
                 N_node = TreeNode(val)
@@ -37,7 +37,7 @@ class Solution(object):
                 return Solution().insert(root.left,val) 
         
         #加入數值大於root的情況
-        if root.val < val && root != None && root.val != val:
+        if root.val < val and root != None and root.val != val:
             if root.right == None:
                 N_node=TreeNode(val)
                 root.right = N_node
