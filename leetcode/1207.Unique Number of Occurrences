@@ -1,0 +1,14 @@
+from collections import defaultdict
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        d = defaultdict(int)
+        for i in arr:
+            d[i] += 1
+        seen = []
+        print(d)
+        for i in d.keys():
+            if d[i] not in seen:
+                seen.append(d[i])
+            else:
+                return False
+        return True
