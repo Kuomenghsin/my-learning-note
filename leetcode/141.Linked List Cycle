@@ -1,0 +1,14 @@
+class Solution:
+    def hasCycle(self, head: ListNode) -> bool:
+        if not head:
+            return False
+        start = head
+        ht = {}
+        while start:
+            if not start.next:
+                return False
+            if start in ht:
+                return True
+            ht[start] = start.val
+            start = start.next
+        
