@@ -1,0 +1,11 @@
+def gradient(p1, p2):
+    if p1[0] == p2[0]: return None
+    else: return abs((p2[1] - p1[1])/(p2[0] - p1[0]))
+
+class Solution:
+    def checkStraightLine(self, coordinates: List[List[int]]) -> bool:
+        grad = gradient(coordinates[0], coordinates[1])
+        for i in range (1, len(coordinates)):
+            if grad != gradient(coordinates[0], coordinates[i]):
+                return False
+        return True
