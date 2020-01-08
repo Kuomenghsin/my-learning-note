@@ -51,6 +51,8 @@ Week 6
 * [Heap Sort 程式碼]
 * [Heap Sort 學習歷程、流程圖]
 * [Merge Sort & Heap Sort 比較]
+
+
 Week 7 
 -------
 **Merge Sort**
@@ -58,6 +60,8 @@ Week 7
 **HW2**
 * [Merge Sort 程式碼]
 * [merge Sort 學習歷程、流程圖]
+
+
 Week 8 
 ---------
 **Binary Tree**
