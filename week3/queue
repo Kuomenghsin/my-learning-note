@@ -1,0 +1,32 @@
+from multiprocessing import Queue, Process
+from Queue import Empty as QueueEmpty
+import random
+def getter(name, queue):
+print 'Son process %s' % name
+while True:
+try:
+value = queue.get(True, 10)
+# block為True,就是如果佇列中無資料了。
+#   |—————— 若timeout預設是None，那麼會一直等待下去。
+#   |—————— 若timeout設定了時間，那麼會等待timeout秒後才會丟擲Queue.Empty異常
+# block 為False，如果佇列中無資料，就丟擲Queue.Empty異常
+print "Process getter get: %f" % value
+except QueueEmpty:
+break
+def putter(name, queue):
+print "Son process %s" % name
+for i in range(0, 1000):
+value = random.random()
+queue.put(value)
+# 放入資料 put(obj[, block[, timeout]])
+# 若block為True，如佇列是滿的：
+#  |—————— 若timeout是預設None，那麼就會一直等下去
+#  |—————— 若timeout設定了等待時間，那麼會等待timeout秒後，如果還是滿的，那麼就丟擲Queue.Full.
+# 若block是False，如果佇列滿了，直接丟擲Queue.Full
+print "Process putter put: %f" % value
+if __name__ == '__main__':
+queue = Queue()
+getter_process = Process(target=getter, args=("Getter", queue))
+putter_process = Process(target=putter, args=("Putter", queue))
+getter_process.start()
+putter_process.start()
