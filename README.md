@@ -15,7 +15,7 @@ Week 2
 ---------
 **Linked List**
 * [筆記整理]
-* [Linked List 程式碼]
+* [Linked List 程式碼](week2/design linked list)
 
 
 Week 3
