@@ -1,0 +1,66 @@
+from collections import defaultdict 
+
+class Graph(): 
+
+    def __init__(self, vertices): 
+        self.V = vertices 
+        self.graph = []
+        self.graph1 = defaultdict(int)
+        self.graph_matrix = [[-1 for column in range(vertices)]  
+                    for row in range(vertices)] 
+    def addEdge(self,u,v,w): 
+        
+        self.graph1[str(u) + "-" + str(v)] = w
+        
+    def Dijkstra(self, s):         
+        min_cost = None
+        fix_min_index = None
+        fix_time = 0
+        checked = [s]
+
+        for i in range(self.V):
+            self.graph_matrix[s][s] = 0
+            if self.graph[s][i] != 0:  # 有連結
+                self.graph_matrix[s][i] = self.graph[s][i]
+                if not min_cost:
+                    min_cost = self.graph[s][i]
+                if min_cost > self.graph[s][i]:
+                    min_cost = self.graph[s][i]
+        
+        while len(checked) < self.V:
+            min_index = self.graph_matrix[s].index(min_cost)
+            while min_index in checked:
+                if not fix_min_index:
+                    fix_min_index = self.graph_matrix[s].copy()
+                
+                fix_min_index.remove(min_cost)
+                fix_time += 1
+                min_index = fix_min_index.index(min_cost) + fix_time          
+
+            checked.append(min_index)
+            self.graph_matrix[min_index] = self.graph_matrix[s].copy()
+            for j in range(self.V):
+                if j in checked:
+                    continue
+                if self.graph[min_index][j] != 0:
+                    if self.graph_matrix[s][j] == -1:  #原本沒連結
+                        self.graph_matrix[min_index][j] = self.graph_matrix[s][min_index] + self.graph[min_index][j]
+                    else:
+                        if self.graph_matrix[s][min_index] + self.graph[min_index][j] < self.graph_matrix[s][j]:
+                            self.graph_matrix[min_index][j] = self.graph_matrix[s][min_index] + self.graph[min_index][j]
+
+            if len(checked) < self.V:                 #找min_cost
+                temp = []
+                for k in range(self.V):
+                    if k not in checked and self.graph_matrix[min_index][k] != -1:
+                        temp.append(self.graph_matrix[min_index][k])
+
+                min_cost = min(temp)
+        
+            s = min_index    
+        
+        SP = {}
+        for m in range(self.V):
+            SP[str(m)] = self.graph_matrix[min_index][m]
+            
+        return SP
