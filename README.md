@@ -29,7 +29,7 @@ Week 3
 Week 4
 ---------
 
-**Insertion Sort Quick Sort**
+**Insertion Sort **
 * [筆記整理]
 * [程式碼]
 
