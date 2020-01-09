@@ -125,8 +125,8 @@ Week 14
 **Minimum Spanning Tree**
 
 **HW6**
-* [Minimum Spanning Tree 程式碼]
-* [Minimum Spanning Tree 流程圖、學習歷程、原理]
+* [Minimum Spanning Tree 程式碼](https://github.com/Kuomenghsin/my-learning-note/blob/master/Week14/minimum%20spanning%20tree)
+* [Minimum Spanning Tree 流程圖、學習歷程、原理](https://github.com/Kuomenghsin/my-learning-note/blob/master/Week14/minimum%20spanning%20tree%20.md)
 
 
 
@@ -135,8 +135,8 @@ Week 15
 **Shortest Path**
 
 **HW6**
-* [Shortest Path 程式碼]
-* [Shortest Path 流程圖、學習歷程、原理]
+* [Shortest Path 程式碼](https://github.com/Kuomenghsin/my-learning-note/blob/master/HW6/shortest%20path)
+* [Shortest Path 流程圖、學習歷程、原理](https://github.com/Kuomenghsin/my-learning-note/blob/master/HW6/Dijkstra%20and%20Kruskal%20%E5%8E%9F%E7%90%86%E8%88%87%E6%B5%81%E7%A8%8B%E5%9C%96%20(1).ipynb)
 
 Week 16
 ---------
