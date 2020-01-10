@@ -21,6 +21,10 @@ HOMEWORK
 * [HW5](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW5)
 * [HW6](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW6)
 
+CS50
+------------
+* [網頁](http://cs50.tv/2013/fall/#about,seminars)
+
 
 
 Week 1
