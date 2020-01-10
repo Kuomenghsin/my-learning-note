@@ -9,7 +9,7 @@ About me
 
 Leetcode 
 ---------
-* [程式碼](https://github.com/Kuomenghsin/my-learning-note/tree/master/leetcode)
+* [程式碼](https://github.com/Kuomenghsin/my-learning-note/tree/master/Leetcode)
 
 HOMEWORK
 ----------
