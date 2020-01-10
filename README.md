@@ -11,6 +11,17 @@ Leetcode
 ---------
 * [程式碼](https://github.com/Kuomenghsin/my-learning-note/tree/master/leetcode)
 
+HOMEWORK
+----------
+
+* [HW1](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW1)
+* [HW2](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW2)
+* [HW3](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW3)
+* [HW4](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW4)
+* [HW5](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW5)
+* [HW6](https://github.com/Kuomenghsin/my-learning-note/tree/master/HW6)
+
+
 
 Week 1
 ---------
